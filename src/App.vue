@@ -1,22 +1,23 @@
 <template>
   <div>
    <h1>{{title}}</h1>
-   <p>{{greeting()}}</p>
+   <characters></characters>
   </div>
 </template>
 
 <script>
+import Characters from './Characters.vue'
+
 export default {
+  components: {
+    'characters': Characters
+  },
   data () {
     return {
-      title: 'First Vue File!'
+      title: 'Ninja App'
     }
   },
-  methods: {
-    greeting: function() {
-      return 'Suuuuupppp';
-    }
-  }
+  
 }
 </script>
 
